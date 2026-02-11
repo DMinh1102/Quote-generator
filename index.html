@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beautiful random quote generator — get inspired with every click.">
+  <title>QuoteSpark — Random Quote Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Animated background blobs -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1 class="logo">✦ QuoteSpark</h1>
+      <p class="tagline">A spark of wisdom, one click at a time</p>
+    </header>
+
+    <main>
+      <div class="quote-card" id="quoteCard">
+        <div class="quote-icon">"</div>
+        <blockquote id="quoteText" class="quote-text">
+          Click the button below to generate your first quote!
+        </blockquote>
+        <cite id="quoteAuthor" class="quote-author">— QuoteSpark</cite>
+      </div>
+
+      <div class="actions">
+        <button id="generateBtn" class="btn btn-primary" aria-label="Generate a new quote">
+          <span class="btn-icon">✦</span> New Quote
+        </button>
+        <button id="copyBtn" class="btn btn-secondary" aria-label="Copy quote to clipboard">
+          <span class="btn-icon">📋</span> Copy
+        </button>
+        <button id="tweetBtn" class="btn btn-secondary" aria-label="Share quote on Twitter">
+          <span class="btn-icon">𝕏</span> Share
+        </button>
+      </div>
+
+      <div class="stats">
+        <span id="quoteCount" class="stat">Quotes seen: <strong>0</strong></span>
+      </div>
+    </main>
+
+    <footer>
+      <p>Made with ♥ for GitHub Pages</p>
+    </footer>
+  </div>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
