@@ -1,5 +1,7 @@
 /* ===== Reset & Base ===== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -90,10 +92,23 @@ body {
 }
 
 @keyframes float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  25% { transform: translate(60px, -40px) scale(1.1); }
-  50% { transform: translate(-30px, 50px) scale(0.95); }
-  75% { transform: translate(40px, 20px) scale(1.05); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate(60px, -40px) scale(1.1);
+  }
+
+  50% {
+    transform: translate(-30px, 50px) scale(0.95);
+  }
+
+  75% {
+    transform: translate(40px, 20px) scale(1.05);
+  }
 }
 
 /* ===== Layout ===== */
@@ -129,6 +144,33 @@ header {
   color: var(--text-secondary);
   margin-top: 0.35rem;
   font-weight: 300;
+}
+
+/* ===== Day Counter ===== */
+.day-counter {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.day-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.day-label {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
 }
 
 /* ===== Quote Card ===== */
@@ -192,6 +234,18 @@ header {
   transition: opacity 0.4s ease;
 }
 
+.quote-pronunciation {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--accent-2);
+  margin-bottom: 1.25rem;
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+  transition: opacity 0.4s ease;
+}
+
 .quote-author {
   display: block;
   font-family: 'Outfit', sans-serif;
@@ -204,6 +258,7 @@ header {
 
 /* Fade animation */
 .quote-card.fade-out .quote-text,
+.quote-card.fade-out .quote-pronunciation,
 .quote-card.fade-out .quote-author {
   opacity: 0;
 }
@@ -357,7 +412,18 @@ footer p {
     font-size: 0.88rem;
   }
 
-  .blob-1 { width: 300px; height: 300px; }
-  .blob-2 { width: 250px; height: 250px; }
-  .blob-3 { width: 200px; height: 200px; }
+  .blob-1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .blob-2 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .blob-3 {
+    width: 200px;
+    height: 200px;
+  }
 }
